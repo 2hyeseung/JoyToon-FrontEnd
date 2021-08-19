@@ -33,7 +33,7 @@ class TokenList extends Component {
 
   componentWillMount = async () => {
 
-    const rank = await fetch("http://115.85.183.11:30070/vRank", {
+    const rank = await fetch("http://127.0.0.1:9000/vRank", {
       method: "post",
       headers: {
         "content-type": "application/json",
