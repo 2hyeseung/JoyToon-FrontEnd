@@ -33,13 +33,13 @@ class TokenList extends Component {
 
   componentWillMount = async () => {
 
-    const rank = await fetch("http://127.0.0.1:9000/vRank", {
+    const rank = await fetch("http://115.85.183.11:30070/vRank", {
       method: "post",
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify({
-        startDate: this.toStringByFormatting(-1), //현재 - 1일
+        startDate: this.toStringByFormatting(-7), //현재 - 7일
         endDate: this.toStringByFormatting(1)     //현재 + 1일 => 전일 거래량 조회
       }),
     }).then((res) => {
